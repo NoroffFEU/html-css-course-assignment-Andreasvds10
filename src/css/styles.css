@@ -1,19 +1,242 @@
-/* Use import to split up your CSS into manageable chunks */
-@import url("./reset.css");
-/* Files that are only needed to be imported are called partials */
-/* These are marked with an underscore: */
-@import url("./variables.css");
-/* Feel free to add as many of these imports as you need */
-
-body {
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
+body, html{
+  height: 100%;
+  margin:  0;
+  padding: 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: rgb(40, 39, 39);
+color: #fff;
 }
 
-.centered {
+
+header {
+  background-color: #4b2e83;
+  color: #385c97;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  text-align: center;
+
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+color: #fffdfd;
+}
+
+.logo img{
+width: 150px;
+height: auto;
+}
+
+.navbar .logo{
+  max-width: 50px;
+  font-weight: bold;
+  height: auto;
+  display: flex;
+  color: rgb(0, 0, 0);
+  align-items: center;
+  margin-right: center;
+}
+
+.nav-links {
+display: flex;
+align-items: center;
+}
+
+
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  margin-left: 30px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar-content{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: 100%;
+}
+
+
+.nav-links a:hover{
+color: #07abe1;
+}
+
+.top-streamed-title {
+  text-align: center;
+  color: #ddd5d5;
+  width: 60%;
+  padding: 20px;
+  font-size: 24px;
+  margin: 30px auto 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.top-streamed-btn {
+  text-align: center;
+  color: #fbf9f9;
+  width: 60%;
+  display: inline-block;
+  padding: 30px;
+  font-size: 18px;
+  background-color: #4b2e83;
+  margin: 20px auto 20px;
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0,0,0, 0.3);
+  text-decoration: none;
+  transition: background-color 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.top-streamed-btn:hover {
+  background-color: #5a92a8;
+  box-shadow: 0 4px 8px rgba(154, 35, 35, 0.3);
+}
+.top-streamed-btn:focus {
+outline:  none;
+box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+
+.top-streamed-text{
+  color: white;
+  text-decoration: none;
+  
+}
+
+
+.movie-section {
   display: flex;
   justify-content: center;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+  padding: 30px 15px;
+  flex-wrap: wrap;
+  background-color: #4b2e83;
+  width: 40%;
+  margin: 50px auto;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border-radius: 16px;
+  gap: 20px;
 }
+ 
+.movie-img:hover {
+transform: scale(1.05);
+transition: transform 0.3s;
+box-shadow: 0px 0px 20px #fff;
+}
+
+.movie-section img {
+width: 200px;
+border-radius: 15px;
+margin: auto;
+transition: transform 0.5s ease, box-shadow 0.5s e;
+}
+
+.movie-wrapper {
+  position: relative;
+  width: 200px;
+  border-radius: 15px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 300px;
+  object-fit: cover;
+}
+
+.movie-wrapper img {
+  width: 100%;
+  display: block;
+  border-radius: 15px;
+}
+
+.movie-overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.movie-wrapper:hover .movie-overlay {
+  transform: translateY(0);
+}
+
+.movie-wrapper:hover {
+  transform: scale(1.05);
+}
+
+
+.description-box {
+  background-color: #4b2e83;
+  color: #fbf7f7;
+  padding: 30px;
+  margin: 25px auto;
+  width: 50%;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.description-box h3 {
+  margin-bottom: 30px;
+}
+
+
+.social-links {
+  text-align: center;
+  padding: 30px;
+  background-color: #4b2e83;
+ width: 25%;
+ margin: 50px auto;
+ border-radius: 16px;
+}
+
+
+.social-links a {
+  color: #ffffff;
+  background-color: transparent;
+  padding: 10px 20px;
+  border: 3px solid #ffffff;
+  border-radius: 24px;
+  font-size: 16px;
+   transition: background-color 0.3s, color 0.3s;
+   text-decoration: none;
+}
+
+
+.social-links a:hover{
+transform: scale(1.1);
+color: #99b2c3;
+}
+
+.social-links a i {
+  margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+  .movie-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movie-section img {
+    margin-bottom: 20px;
+  }
+
+  .description-box, .social-links {
+    width: 90%;
+  }
+  }
+
+
+
