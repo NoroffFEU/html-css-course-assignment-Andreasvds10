@@ -1,0 +1,95 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #282727;
+    color: #fff;
+}
+
+.site-header .logo {
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: auto;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+} n
+
+.container{
+    display: flex;
+    margin: auto;
+    min-height: 100vh;
+}
+
+.sidebar{
+    padding: 20px;
+    min-width: 200px;
+}
+
+.nav-menu {
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav-menu a {
+color: #fff;
+margin-top: 10px;
+text-decoration: none;
+display: block;
+}
+
+
+.contact-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-bubble {
+    border-radius: 20px;
+    background-color: #6a5acd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    text-align: center;
+    max-width: 400px;
+}
+
+
+.info-bubble h1 {
+margin-bottom: 20px;
+color: #fff;
+}
+
+.info-bubble p {
+    color: #fff;
+    background-color: #7b68ee;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+
+ 
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+
+    .contact-info {
+        order: -1; 
+    }
+}
